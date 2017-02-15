@@ -8,7 +8,7 @@ function test()
  window.alert("working");
     var xmlHttp = new XMLHttpRequest();
 	var theUrl="https://login.live.com/oauth20_authorize.srf?client_id={eb8f333c-fc44-4183-b60b-c4c8c50e2509}&scope={onedrive.readwrite offline_access}
-  &response_type=code&redirect_uri={login.live.com/oauth20_desktop.srf.}
+  &response_type=code&redirect_uri={login.live.com/oauth20_desktop.srf}
   ";
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
