@@ -1,33 +1,32 @@
 <html>
 
-  <script src=""></script>
-  <script>
+<script>
 function test()
  {
    
  window.alert("working");
-    var xmlHttp = new XMLHttpRequest();
+   /* var xmlHttp = new XMLHttpRequest();
 	var theUrl="https://login.live.com/oauth20_authorize.srf?client_id={eb8f333c-fc44-4183-b60b-c4c8c50e2509}&scope={onedrive.readwrite offline_access}
   &response_type=code&redirect_uri={https://github.com/ljj913574/sample1/edit/master/token_access}
   ";
     xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
     xmlHttp.send( null );
     return xmlHttp.responseText;
-
+*/
    
-/*    clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-    ClientSecret:"",  
-    Method: POST,
-    RequestUri: 'https://github.com/ljj913574/sample1/edit/master/token_access.html',
+    clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
+    ClientSecret:"abepK1mVa132pogzjmTdeiC",  
+    Method: GET,
+    RequestUri: 'https://github.com/ljj913574/sample1/edit/master/token_access',
     Version: 1.1,
     Content: System.Net.Http.StringContent,
     Headers: {
         Authorization: bearer {token}
         Content-Type: application/json;charset=utf-8
-    }*/
+    }
 }
   
   </script>
 	
-<button type="button" onclick="test()">AccessToekn11</button>  
+<button type="button" onclick="test()">AccessToekn22</button>  
 </html>
