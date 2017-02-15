@@ -1,35 +1,23 @@
+<!DOCTYPE html>
 <html>
-	
- <script type="text/javascript">
-  
-        function launch2() 
-        {
-           window.alert("working");
-		clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-		    ClientSecret:"abepK1mVa132pogzjmTdeiC",  
-		    Method: GET,
-		    RequestUri: 'https://github.com/ljj913574/sample1/edit/master/token_access',
-		    Version: 1.1,
-		    Content: System.Net.Http.StringContent,
-		    Headers: 
-   			 {
-				Authorization: bearer {token}
-				Content-Type: application/json;charset=utf-8
-			}
-		
-	}
+<body>
 
-	
-	
-	
-	
-	
-	</script>
- <button onclick="launch2()"> save to onedrive direct file </button>
-    
+<p>Click the button to display the URL of the document.</p>
 
-   
-    
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x = document.URL;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
+
 
     
     
