@@ -3,6 +3,7 @@
 <body>
 
 <button onclick="myFunction()">Try it</button>
+<button onclick="gettoken()">gettoken</button>
 
  <script>
 function myFunction() 
@@ -11,6 +12,13 @@ function myFunction()
 	//Authorization: bearer {token};
   
   
+}
+	 
+	 
+function gettoken() 
+{
+	var a=document.URL;
+	window.alert(a);
 }
 
  </script>
