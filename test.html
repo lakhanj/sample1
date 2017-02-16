@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
-<body>
+ <head>
+  <title>Display IP Address</title>
+</head>
+ 
+ 
+<script>
 
-<form action="https://ljj913574.github.io/sample1/token_access" method=GET https://login.live.com/oauth20_authorize.srf?client_id=0000000603DB0F&scope=wl.signin%20wl.basic&response_type=code&redirect_uri=http%3A%2F%2Fwww.contoso.com%2Fcallback.php>
+function httpGet()
+{
 
-<input type="submit" value="sf">
-</form>
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "//ipinfo.io/json", true);
+xhr.send();
+//xhr.addEventListener("readystatechange", processRequest, true);
+xhr.onreadystatechange = processRequest;
 
-</body>
+function processRequest(e) 
+{
+// window.alert("inside processRequest()");
+ 
+    if (xhr.readyState == 4 && xhr.status == 200) 
+    {
+        var response = JSON.parse(xhr.responseText);
+        window.alert(response.ip);
+        
+    }
+}
+
+
+}
+
+</script>
+<button onclick="httpGet()"> token1 </button>
+
 </html>
+
+
+
+
+
+
 
 <!--<html>
   <head>
