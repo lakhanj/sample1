@@ -26,25 +26,7 @@
                         console.log("6");
                       OneDrive.save(odOptions);
         }
-        function launch() {
-           
-                      var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                       // sourceInputElementId: "",
-                          sourceUri: data,
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
+       
         var openfile= function(event){
 
              var input= event.target;
@@ -68,7 +50,6 @@
     <input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />
     
     <button onclick="launch2()"> save to onedrive direct file </button>
-    <button onclick="launch()"> save to onedrive using dataURL </button>
-    
+   
 </body>
 </html> 
