@@ -7,7 +7,8 @@
 
  <script>
 
-	 
+//ar url = 'http://localhost:3000/_oauth/google#access_token=ya29.5HxuYol1Io8JLeGePDznbfkkwu_PC4uodKwG8_1clFYAn9AgdOV1WGpOTNQP3s76HAsn7Y4zWw&token_type=Bearer&expires_in=3600',
+  //  access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];	 
 	 
 function gettoken() 
 {
@@ -17,8 +18,9 @@ function gettoken()
 	
 	var a=document.URL;
 	var token = new URL(a);
+	var access_token = token.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
 	
-	window.alert(token);
+	window.alert(access_token);
 	
 
 }
