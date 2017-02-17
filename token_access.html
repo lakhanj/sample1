@@ -14,22 +14,20 @@ function gettoken()
 	
 	
 	//window.alert("\""+b+"\"");
-	window.alert("Testing");
+	
 	var a=document.URL;
 	var b="\'"+a+"\'";
-	window.alert(b);
-	
+    
+    var url = b,
+    access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
+    window.alert(access_token);
 
+   
 }
-
  </script>
 <html>
  <head>
 	
-  
-
-
-
 
 
 
