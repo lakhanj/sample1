@@ -11,8 +11,14 @@
 	 
 function gettoken() 
 {
+	
+	//var token = new URL("http://localhost:3000/_oauth/google#access_token=ya29.5HxuYol1Io8JLeGePDznbfkkwu_PC4uodKwG8_1clFYAn9AgdOV1WGpOTNQP3s76HAsn7Y4zWw&token_type=Bearer&expires_in=3600").hash.split('&').filter(function(el) { if(el.match('access_token') !== null) return true; })[0].split('=')[1];
+
+	
 	var a=document.URL;
-	window.alert(a);
+	var token = new URL(a);
+	
+	window.alert(token);
 	
 
 }
