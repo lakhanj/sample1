@@ -18,9 +18,8 @@ function gettoken()
 	var a=document.URL;
 	var b="\'"+a+"\'";
     
-    var url = b,
-    access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
-    window.alert(access_token);
+    var url = b,access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
+    window.alert("Token:"+access_token);
 
    
 }
