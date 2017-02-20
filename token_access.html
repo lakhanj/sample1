@@ -21,59 +21,55 @@
 
 
 	
-	
-	var data;
-        function launch2() 
-	{
+
+var data;
+function launch2() 
+{
 		
 	window.alert("launch2");
-	
 	headers: 
 	{
 	"Authorization": "Bearer " + token,
 	"accept": "application/json;odata=verbose"
-        }
+	}
 	window.alert(headers);	
 		
 		
-           var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                        sourceInputElementId: "fileUploadControl",
-                          sourceUri: "",
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
+   var odOptions =
+       {
+		  clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
+		  action: "save",
+		  sourceInputElementId: "fileUploadControl",
+		  sourceUri: "",
+		  fileName: "fil.txt",
+		  openInNewWindow: true,
+		  advanced: {},
+		  success: function(files) { console.log('success');},
+		  progress: function(p) { console.log("2"); },
+		  cancel: function() {console.log("3"); },
+		  error: function(e) { console.log(e); }
+		};
+
+		console.log("6");
+	      OneDrive.save(odOptions);
+	}
         
-        var openfile= function(event){
-
-             var input= event.target;
+        var openfile= function(event)
+	{
+	     var input= event.target;
              var reader=new FileReader();
-
-              var save = function (dataURL){
-                       data=dataURL;
-                      
-                    };
+	     var save = function (dataURL)
+	     {data=dataURL;};
    
-              
-              reader.onload= function() {
-                save(reader.result);
-                console.log("1");
+              reader.onload= function() 
+	      {
+               save(reader.result);
+               console.log("1");
               }
               reader.readAsDataURL(input.files[0]);
-        }
-	}
+         }
+}
 </script>
-
 </html>
 	
 	
