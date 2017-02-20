@@ -26,7 +26,7 @@ function launch2()
 	  var odOptions = {
 	 // clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
 	  access_token="EwAYA61DBAAUGCCXc8wU/zFu9QnLdZXy%2bYnElFkAAVOTYt3a4T2yQTwDOyCvnjxucjoa75bIDOs%2btKYEJy6s2DxvVup1DA5xXtSQR78n/lswfnNX1gN2i2nnUzdwciPS1dTrFYQzge6Zv9/YNBxV7MwSH5ntr8l0NnNb/tRjlp6vm3y8RubeO/nbgmV1Eo62MXsNNLM9JpW8CL9ZYn79OkgldUyTX5e2o7hfrXtCCRw7mYspmKDOnoyopOyTIwyyPQ4ocL7gWtM%2bmiHnYx/1PSqhKEID6MYzo1AiVnoNxCbJqi0VPa0EX%2b2rLMn0ZgTDlE6t3E3yQqHOfCub3kFYwfU53JBHCFgGBYsNG%2bbrKolOXZCLG4xnkTRauo6EmwUDZgAACEwKTIXXumUI6AGZfqV7rLA1xvvt4dREJeQk5Rwt2As6oBNakPTjHfNRfjjGVCfsypiYj1Cezfod00nZd9nEHRTDZw0KZLG2bAmww9WSY9UY2DKh8lsKtCZeDAtCMF6MH0zCbfK/Mjtgkqf6ym%2bbAQ2%2bm%2bfvxXKL26rGi5d9l4z2AhBo9xlGSef0xGbFARoQSixref8nIc0XG5hUIKzEEWLnoibCwkxtAF5kAzFRVUUX9pSJnFdrS9zvIk2q%2bf2jOIShDq/BFOmbBP32NEi2UIa9kAveCh0K5FYYbhFUu3mHfudaDWNME/iy9M98a6IIevT6IHtSnF1XZa3xNj0Z5munt7bKdBaMVqs%2bzP5oEyWugypqUuq%2bd1HE0ui%2bKRfiMddvMko4G%2byXik7zjEoKZSbRVE%2bS9aavBn90xw%2bsgRAw8vT6ccLfws6YoH14jYZUcxHIXCs%2bSKb9HjtpsJ6CPIqBgnqpZK8rbmWizk6Sl8tvQ%2bCrChX7lK%2bs4w/8BGxACD0gHO1kMDCElRzJcCd2/7UzsZxkJ9o0g/VqoL8d8Vui9xbc3oOyqOYV0gSOwXV9AUemHqQLItAxjkmKMVYAUkm4G9pHIfHWGwO5W4m%2b6vk8zBYUnPFQ7rSaTe0RYcpdwe%2bKv4HZD33OhxlRq9aiORtd9B4C
-";
+",
 		  
 	  action: "save",
 	  sourceInputElementId: "fileUploadControl",
@@ -35,7 +35,7 @@ function launch2()
 	  openInNewWindow: true,
 	  advanced: {},
 
-	  success: function(files) { console.log('success');},
+	  success: function(files) { window.alert("Save to onedrive");console.log('success');},
 
 	  progress: function(p) {console.log("2"); },
 	  cancel: function() {console.log("3"); },
