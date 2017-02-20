@@ -3,7 +3,7 @@
 
 <button onclick="gettoken()">gettoken</button>
 <input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />
-<button onclick="launch2()"> save333 </button>	
+<button onclick="launch2()"> save </button>	
 
 <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
 <script>
@@ -24,12 +24,15 @@ function launch2()
 {
 	window.alert("launch2");
 	
-	header:{
-	Authorization:bearer{token},
-		
+	headers: 
+	{
+	"Authorization": "Bearer " + token,
+	"accept": "application/json;odata=verbose"
+        }
+	window.alert(headers);	
 	
 		
-	}
+	
 	
 
 	var odOptions =
