@@ -22,33 +22,35 @@ function logout()
 {	
 	window.open("https://login.live.com/oauth20_logout.srf?client_id=eb8f333c-fc44-4183-b60b-c4c8c50e2509&redirect_uri=https%3A%2F%2Fljj913574.github.io%2Fsample1%2Ftest");	
 }	
-function launch2() 
-{
-	window.alert("welcome");
 	var data;
-	
-	function launch2() {
-           var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                        sourceInputElementId: "fileUploadControl",
-                          sourceUri: "",
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
-        
+	function launch2()
+	{
+
+	window.alert("welcome");
+
+	   var odOptions = {
+			  clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
+			  action: "save",
+			sourceInputElementId: "fileUploadControl",
+			  sourceUri: "",
+			  fileName: "fil.txt",
+			  openInNewWindow: true,
+			  advanced: {},
+			  success: function(files) { console.log('success');},
+			  progress: function(p) { console.log("2"); },
+			  cancel: function() {console.log("3"); },
+			  error: function(e) { console.log(e); }
+			};
+
+			console.log("6");
+		      OneDrive.save(odOptions);
+	}
+
         var openfile= function(event){
+
              var input= event.target;
              var reader=new FileReader();
+
               var save = function (dataURL){
                        data=dataURL;
                       
@@ -60,10 +62,10 @@ function launch2()
                 console.log("1");
               }
               reader.readAsDataURL(input.files[0]);
-        }	
-	
+        }
 	
 }
+	
  </script>
  </html>
 
