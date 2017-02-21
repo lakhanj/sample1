@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>JavaScript Code Sample</title>
+        <script type="text/javascript" src="//js.live.net/v5.0/wl.js"></script>
+    </head>
+    <body>
+<div style="padding: 1em">
 
-<button onclick="gettoken()">gettoken</button>
-<input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />
-<button onclick="launch2()"> save to onedrive</button>
-<script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
-<script type="text/javascript">
-        
-	 /*function gettoken() 
-	{
-	var a=document.URL;
-	var b="\'"+a+"\'";
 
-	var url = b,access_token = url.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
-	window.alert("Token:"+access_token);
-	
-	}*/     
-	      
-	  var data;
-	function launch2() {
-           var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                        sourceInputElementId: "fileUploadControl",
-                          sourceUri: "",
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
-        
-        var openfile= function(event){
+        <div id="signin"></div>
+        <label id="info"></label>
+    <form>
+    <input id="file" name="file" type="file" />
+</form>
+    <button onclick="uploadFile()">Save file directly (calling WL.upload)</button>
+        <script>
+            WL.init({
+                client_id: 'eb8f333c-fc44-4183-b60b-c4c8c50e2509',
+                redirect_uri: 'https://ljj913574.github.io/sample1/token_access',
+                scope: "wl.signin",
+                response_type: "token"
+            });
+            WL.ui({
+                name: "signin",
+                element: "signin"
+            });
+            function uploadFile() {
+                WL.login({
+                    scope: "wl.skydrive_update"
+                }).then(
+                    function (response) {
+                        WL.upload({
+                            path: "me/skydrive/my_documents",
+                            element: "file",
+                            overwrite: "rename"
+                        }).then(
+                            function (response) {
+                                document.getElementById("info").innerText =
+                                    "File uploaded.";
+                            },
+                            function (responseFailed) {
+                                document.getElementById("info").innerText =
+                                    "Error uploading file: " + responseFailed.error.message;
+                            }
+                        );
+                    },
+                    function (responseFailed) {
+                        document.getElementById("info").innerText =
+                            "Error signing in: " + responseFailed.error.message;
+                    }
+                );
+            }
 
-             var input= event.target;
-             var reader=new FileReader();
-
-              var save = function (dataURL){
-                       data=dataURL;
-                      
-                    };
-   
-              
-              reader.onload= function() {
-                save(reader.result);
-                console.log("1");
-              }
-              reader.readAsDataURL(input.files[0]);
-        }
-</script>
-</head>
-
+        </script> 
+    </div>
+    </body>
+</html> 
