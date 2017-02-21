@@ -31,15 +31,18 @@
                 }).then(
                     function (response) {
                         WL.upload({
-                            path: "me/skydrive/my_documents",
+                            path: "me/skydrive/my_documents", //path to store uploaded file
                             element: "file",
                             overwrite: "rename"
                         }).then(
-                            function (response) {
+                            function (response) 
+                            {
+                                window.alert("File has been uploaded");
                                 document.getElementById("info").innerText =
                                     "File uploaded.";
                             },
-                            function (responseFailed) {
+                            function (responseFailed) 
+                            {
                                 document.getElementById("info").innerText =
                                     "Error uploading file: " + responseFailed.error.message;
                             }
