@@ -37,7 +37,7 @@ function logout()
 			  fileName: "fil.txt",
 			  openInNewWindow: true,
 			  advanced: {},
-			  success: function(files) { console.log('success');},
+			  success: function(files) { window.alert("success()");console.log('success');},
 			  progress: function(p) { console.log("2"); },
 			  cancel: function() {console.log("3"); },
 			  error: function(e) { console.log(e); }
