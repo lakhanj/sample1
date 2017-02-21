@@ -38,7 +38,7 @@ function logout()
 			  openInNewWindow: true,
 			  advanced: {},
 			  success: function(files) { window.alert("success()");console.log('success');},
-			  progress: function(p) { console.log("2"); },
+			  progress: function(p) { window.alert("uploading is in progress"); console.log("2"); },
 			  cancel: function() {console.log("3"); },
 			  error: function(e) { console.log(e); }
 			};
