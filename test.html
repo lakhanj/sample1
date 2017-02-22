@@ -4,10 +4,9 @@
 <body>
 
 <button onclick="login()">Login</button><br><br>
-<input id="file" name="file" type="file" />	
-<!--<input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />-->
+<input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />
 	
-<!--<button onclick="launch2()"> save to onedrive</button><br><br>-->
+<button onclick="launch2()"> save to onedrive</button><br><br>
 
 <button onclick="logout()">Logout</button>
 <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
@@ -19,10 +18,14 @@ function login()
 	window.alert("login() in execution ");
   	window.open("https://login.live.com/oauth20_authorize.srf?client_id=eb8f333c-fc44-4183-b60b-c4c8c50e2509&scope=wl.signin%20wl.basic%20wl.offline_access&response_type=token&redirect_uri=https%3A%2F%2Fljj913574.github.io%2Fsample1%2Ftest");	
 	
+}
+
+function launch2()
+{
 	window.alert("welcome");
 
 	var odOptions = {
-			  //clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
+			  clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
 			  action: "save",
 			  sourceInputElementId: "fileUploadControl",
 			  sourceUri: "",
@@ -58,11 +61,10 @@ function login()
 	}
 }
  
-
 function logout() 
 {	window.alert("logout() in execution ");
 	window.open("https://login.live.com/oauth20_logout.srf?client_id=eb8f333c-fc44-4183-b60b-c4c8c50e2509&redirect_uri=https%3A%2F%2Fljj913574.github.io%2Fsample1%2Ftest");	
 }	
  </script>
- </html>
+</html>
 
