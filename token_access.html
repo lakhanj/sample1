@@ -14,6 +14,9 @@
     <input id="file" name="file" type="file" />
 </form>
     <button onclick="uploadFile()">Save file directly (calling WL.upload)</button>
+    <button onclick="requestToken()">Using Azure AD)</button>
+    
+    
         <script>
             WL.init({
                 client_id: 'eb8f333c-fc44-4183-b60b-c4c8c50e2509',
@@ -55,6 +58,45 @@
                 );
             }
 
+            
+            
+            
+            
+   function requestToken()
+   { 
+         window.alert("requestToken running");
+  // Change clientId and replyUrl to reflect your app's values 
+  // found on the Configure tab in the Azure Management Portal. 
+  // Also change {your_subdomain} to your subdomain for both endpointUrl and resource. 
+  var clientId    = '918b10cf-b7d5-4396-862c-83c9ee7b1bfe';
+  var replyUrl    = 'https://ljj913574.github.io/sample1/token_access'; 
+  var endpointUrl = 'https://{https://ljj913574.github.io}-my.sharepoint.com/_api/v1.0/me/files';
+  var resource = "https://{https://ljj913574.github.io}-my.sharepoint.com"; 
+
+  var authServer  = 'https://login.windows.net/common/oauth2/authorize?';  
+  var responseType = 'token'; 
+
+  var url = authServer + 
+            "response_type=" + encodeURI(responseType) + "&" + 
+            "client_id=" + encodeURI(clientId) + "&" + 
+            "resource=" + encodeURI(resource) + "&" + 
+            "redirect_uri=" + encodeURI(replyUrl); 
+
+  window.alert("Token:"+responseType);
+  window.location = url; 
+}
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </script> 
     </div>
     </body>
