@@ -1,72 +1,23 @@
+
+<!DOCTYPE html>
 <html>
-  <head>
-    
-    <script type="text/javascript" src="https://js.live.net/v7.0/OneDrive.js"></script>
-    
-      <script type="text/javascript">
-        var data;
-        function launch2() {
-        window.alert("login()");
-           var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                        sourceInputElementId: "fileUploadControl",
-                          sourceUri: "",
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
-        function launch() {
-           
-                      var odOptions = {
-                          clientId: "eb8f333c-fc44-4183-b60b-c4c8c50e2509",
-                          action: "save",
-                       // sourceInputElementId: "",
-                          sourceUri: data,
-                          fileName: "fil.txt",
-                          openInNewWindow: true,
-                          advanced: {},
-                          success: function(files) { console.log('success');},
-                          progress: function(p) { console.log("2"); },
-                          cancel: function() {console.log("3"); },
-                          error: function(e) { console.log(e); }
-                        };
-                        
-                        console.log("6");
-                      OneDrive.save(odOptions);
-        }
-        var openfile= function(event){
+<head>
 
-             var input= event.target;
-             var reader=new FileReader();
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+<meta http-equiv="refresh" content="5">
+<meta name="viewport" content="width-device=width , initial-scale=7.0 ">
 
-              var save = function (dataURL){
-                       data=dataURL;
-                      
-                    };
-   
-              
-              reader.onload= function() {
-                save(reader.result);
-                console.log("1");
-              }
-              reader.readAsDataURL(input.files[0]);
-        }
-</script>
+
+<!--<MARQUEE WIDTH="100%" vspace="200px;" BGCOLOR=YELLOW><p>Howdy there!</p><p>Good to see ya!</p></MARQUEE>
+-->
+
 </head>
 <body>
-    <input id="fileUploadControl" name="fileUploadControl" type="file" onchange="openfile(event)" />
-    
-    <button onclick="launch2()"> save to onedrive direct file </button>
-    <button onclick="launch()"> save to onedrive using dataURL </button>
-    
+
+  <img src="https://github.com/ljj913574/sample1/edit/master/images.JPG" width="50%" height="500px">
 </body>
 </html>
+
